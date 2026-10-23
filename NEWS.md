@@ -1,6 +1,8 @@
 # reportifyr 0.4.0
 ## Bug fixes
 
+* Report footnotes now omit empty Notes and Abbreviations sections instead of printing `N/A`. Null values, blank strings, and `NA`/`NULL` markers are ignored, while valid standard notes and abbreviations are retained.
+
 * `ggsave_with_metadata()` and `save_rds_with_metadata()` now discover the reportifyr project from the output destination before falling back to the working directory, honor existing context roots, and stop before writing if no project can be found. Plot metadata and overlays also respect `ggsave(path = ...)`.
 
 ## New Features
