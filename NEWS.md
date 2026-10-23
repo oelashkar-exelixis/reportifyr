@@ -5,6 +5,8 @@
 
 * `ggsave_with_metadata()` and `save_rds_with_metadata()` now discover the reportifyr project from the output destination before falling back to the working directory, honor existing context roots, and stop before writing if no project can be found. Plot metadata and overlays also respect `ggsave(path = ...)`.
 
+* `write_object_metadata()` now also resolves the project from the object file's location when called directly, rather than relying on the working directory.
+
 ## New Features
 
 * `rpfy_context()` captures session-level metadata (system info, source attribution, author, project root, caller-supplied tags) once and reuses it across many `*_with_metadata()` calls. A new `context` argument has been added to `ggsave_with_metadata()`, `save_rds_with_metadata()`, `write_csv_with_metadata()`, and `write_object_metadata()`. When `context = NULL` (default) an ephemeral context is built per call, so existing code is unaffected.
