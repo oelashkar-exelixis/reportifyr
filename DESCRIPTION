@@ -51,7 +51,7 @@ Suggests:
     testthat (>= 3.0.0),
     withr
 Remotes:
-    github::A2-ai/pyro
+    A2-ai/pyro
 Config/testthat/edition: 3
 LazyData: true
 URL: https://a2-ai.github.io/reportifyr/
